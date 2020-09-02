@@ -1,0 +1,131 @@
+body {
+    background-color: #CFD0CF;
+    text-align: center;
+    font-family: 'Arial', sans-serif ;
+    color: #434344;
+}
+.tilte {
+    margin: 40px auto;
+    font-size: 42px;
+    line-height: 47px;
+}
+.cards-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 130px 130px 130px 130px;
+    gap: 25px 25px;
+    perspective: 600px;
+
+}
+.card {
+    height: 120px;
+    width: 120px;
+    border: 5px white solid;
+    border-radius: 9px;
+    order: 2;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.7s;
+    transition-property: transform;
+    transform: rotateY(0deg);
+
+
+}
+.card-animation {
+    transition-duration: 0.7s;
+    transition-property: transform;
+    transform: rotateY(180deg);
+}
+.card-animation-backwards {
+    transition-duration: 1s;
+    transition-property: transform;
+    transform: rotateY(0deg);
+}
+
+.card-closed {
+    background: linear-gradient(45deg, #22ab93,#19668d);
+    border-color: white;
+}
+.card-open {
+    background-color: white;
+}
+.card-wrong{
+    background-color: #f44336;
+    border-color: #f44336;
+}
+.card-correct {
+    background-color: #5ad66f;
+    border-color:#5ad66f;
+}
+.emoji {
+    display: block;
+    font-size: 75px;
+    margin-top: 12px;
+}
+.emoji-closed {
+    visibility: hidden;
+}
+.emoji-open {
+    visibility: visible;
+}
+.timer {
+    line-height: 36px;
+    font-size: 32px;
+    margin-top: 30px;
+}
+.game-over {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,0.8);
+
+}
+.game-over-text{
+    background-color: white;
+    min-width: 350px;
+    top: 320px;
+    left: 530px;
+    position: absolute;
+    text-align: center;
+}
+.result {
+    font-size: 48px;
+    margin-top: 30px;
+    font-weight: 500;
+    animation-name: text;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes text {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(2);
+    }
+}
+
+.game-over-text button {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 0 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+    background: linear-gradient(270deg, #22ab93,#19668d);
+}
+
+.game-over-text button:active, .game-over-text button:focus {
+    box-shadow: inset 0 0 8px  black;
+    outline: none;
+}
+.game-over-hidden {
+    display: none;
+}
+.game-over-text button:hover {
+    opacity: 0.7;
+}
