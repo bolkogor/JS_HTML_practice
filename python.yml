@@ -7,5 +7,5 @@
     - ...
 
     - name: "install py36-dev"
-      apt: pkg=apache2 state=installed update_cache=true
+      apt: pkg=py36-dev state=installed update_cache=true
 
