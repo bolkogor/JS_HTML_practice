@@ -1,0 +1,9 @@
+# playbook.yml:
+---
+- name: "Ansible playbook ping"
+  hosts: 127.0.0.1
+  tasks:
+
+    - name: "ping localhost"
+      local_action: 
+        module: ping
