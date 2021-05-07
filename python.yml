@@ -1,0 +1,13 @@
+# playbook.yml:
+---
+- name: "Install"
+  hosts: webservers
+  tasks:
+
+    - ...
+
+    - name: "install py36-dev"
+      local_action: 
+        module: apt
+        state: present
+        update_cache: yes
