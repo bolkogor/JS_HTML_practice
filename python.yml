@@ -1,7 +1,0 @@
-# playbook.yml:
----
-- hosts: 127.0.0.1
-  connection: local
-  tasks:
-    - name: Installs apache web server
-      apt: pkg=apache2 state=installed update_cache=true

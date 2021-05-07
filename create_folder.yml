@@ -1,0 +1,7 @@
+# playbook.yml:
+---
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: create new dir
+      command: mkdir /etc/my_dir/
