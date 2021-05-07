@@ -1,13 +1,11 @@
 # playbook.yml:
 ---
-- name: "Install"
-  hosts: webservers
+- name: "Install python"
+  hosts: 127.0.0.1
   tasks:
 
     - ...
 
     - name: "install py36-dev"
-      local_action: 
-        module: apt
-        state: present
-        update_cache: yes
+      apt: pkg=apache2 state=installed update_cache=true
+
